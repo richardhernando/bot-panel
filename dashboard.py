@@ -120,20 +120,3 @@ if os.path.exists(ARCHIVO):
 
 else:
     st.warning("⚠️ No se encontró el archivo `simulador_resultados.csv`. Cargalo o generá nuevas señales para visualizar el panel.")
-        st.markdown("### 📈 Curva de capital simulada")
-        fig, ax = plt.subplots()
-        ax.plot(df_filtrado['hora'], df_filtrado['capital'], color='lime')
-        ax.set_xlabel("Hora")
-        ax.set_ylabel("Capital")
-        ax.grid(True)
-        st.pyplot(fig)
-
-    # 📋 Tabla de operaciones
-    st.markdown("### 📋 Detalle de señales")
-    st.dataframe(
-        df_filtrado[['hora', 'activo', 'direccion', 'resultado', 'capital']].sort_values(by='hora', ascending=False),
-        use_container_width=True
-    )
-
-else:
-    st.info("🚫 Aún no se han generado señales. Cargá el archivo `simulador_resultados.csv` o activa tu simulador para ver resultados.")
