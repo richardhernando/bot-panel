@@ -1,0 +1,6 @@
+{
+  "filtro_marco_mayor": true,
+  "filtro_volatilidad": true,
+  "filtro_rango": true,
+  "probabilidad_minima": "Media",
+  "modo_operacion": "Dinámico"
